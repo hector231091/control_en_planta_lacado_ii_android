@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="100dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/input_personal_number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/config_header_input_data"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20dip"
+                    android:text="Nº OP."/>
+
+                <TextView
+                    android:id="@+id/input_day_header"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/config_header_input_data"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20dip"
+                    android:text="DÍA"/>
+
+                <TextView
+                    android:id="@+id/input_month_header"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/config_header_input_data"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20dip"
+                    android:text="MES"/>
+
+                <TextView
+                    android:id="@+id/input_year_header"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/config_header_input_data"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20dip"
+                    android:text="AÑO"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/personal_number"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <EditText
+                    android:id="@+id/number_of_day"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <Spinner
+                    android:id="@+id/name_of_month"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_edit_text_and_text_view"
+                    android:entries="@array/Meses"
+                    android:gravity="center" />
+
+                <EditText
+                    android:id="@+id/number_of_year"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="1">
+                <Button
+                    android:id="@+id/register_day_and_number_button"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="REGISTRAR DÍA Y OPERARIO" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/register_data_label"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/number_of_incidence_header"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/config_header_input_data"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="12dip"
+                    android:text="Nº INCIDENCIA"/>
+
+                <TextView
+                    android:id="@+id/name_of_incidence_header"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/config_header_input_data"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="12dip"
+                    android:text="NOMBRE INCIDENCIA"/>
+
+                <TextView
+                    android:id="@+id/number_of_squares_header"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/config_header_input_data"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="12dip"
+                    android:text="Nº CUADRADOS"/>
+
+                <TextView
+                    android:id="@+id/hours"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/config_header_input_data"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="12dip"
+                    android:text="HORAS"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/input_number_of_incidence_entry_1"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <TextView
+                    android:id="@+id/name_of_incidence_entry_1"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <EditText
+                    android:id="@+id/input_number_of_squares_entry_1"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <TextView
+                    android:id="@+id/number_of_squares_in_hours_1"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/input_number_of_incidence_entry_2"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <TextView
+                    android:id="@+id/name_of_incidence_entry_2"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <EditText
+                    android:id="@+id/input_number_of_squares_entry_2"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <TextView
+                    android:id="@+id/number_of_squares_in_hours_2"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/input_number_of_incidence_entry_3"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <TextView
+                    android:id="@+id/name_of_incidence_entry_3"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <EditText
+                    android:id="@+id/input_number_of_squares_entry_3"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <TextView
+                    android:id="@+id/number_of_squares_in_hours_3"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/input_number_of_incidence_entry_4"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <TextView
+                    android:id="@+id/name_of_incidence_entry_4"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <EditText
+                    android:id="@+id/input_number_of_squares_entry_4"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+                <TextView
+                    android:id="@+id/number_of_squares_in_hours_4"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/check_hours_button"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="REGISTRAR HORAS DEL DÍA" />
+
+                <TextView
+                    android:id="@+id/total_of_hours"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/register_input_data_button"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="REGISTRAR HORAS DEL DÍA" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/proof"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border_edit_text_and_text_view"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
